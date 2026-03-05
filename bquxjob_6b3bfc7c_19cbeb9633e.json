@@ -1,0 +1,1711 @@
+[{
+  "table_name": "checkout_started",
+  "column_name": "_PARTITIONTIME",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "NO"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "currency",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "total",
+  "data_type": "FLOAT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "currency",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "total",
+  "data_type": "FLOAT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "checkout_started_view",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "_PARTITIONTIME",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "NO"
+}, {
+  "table_name": "order_completed",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "currency",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "total",
+  "data_type": "FLOAT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "currency",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "total",
+  "data_type": "FLOAT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "order_completed_view",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "_PARTITIONTIME",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "NO"
+}, {
+  "table_name": "pages",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_campaign_content",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_campaign_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_campaign_medium",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_campaign_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_campaign_source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_campaign_term",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "user_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "pages",
+  "column_name": "title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "_PARTITIONTIME",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "NO"
+}, {
+  "table_name": "product_added",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "currency",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "price",
+  "data_type": "FLOAT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "quantity",
+  "data_type": "INT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "context_campaign_source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added",
+  "column_name": "variant",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "currency",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "price",
+  "data_type": "FLOAT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "quantity",
+  "data_type": "INT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_added_view",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "_PARTITIONTIME",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "NO"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_campaign_content",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_campaign_medium",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_campaign_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_campaign_source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "currency",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "price",
+  "data_type": "FLOAT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "variant",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed",
+  "column_name": "context_campaign_term",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_campaign_content",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_campaign_medium",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_campaign_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_campaign_source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "currency",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "price",
+  "data_type": "FLOAT64",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "product_viewed_view",
+  "column_name": "variant",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "_PARTITIONTIME",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "NO"
+}, {
+  "table_name": "tracks",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_campaign_content",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_campaign_medium",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_campaign_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_campaign_source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks",
+  "column_name": "context_campaign_term",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "anonymous_id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_campaign_content",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_campaign_medium",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_campaign_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_campaign_source",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_ip",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_library_name",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_library_version",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_locale",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_page_path",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_page_referrer",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_page_search",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_page_title",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_page_url",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_timezone",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_user_agent",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_user_agent_data_brands",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_user_agent_data_mobile",
+  "data_type": "BOOL",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "context_user_agent_data_platform",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "event",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "event_text",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "id",
+  "data_type": "STRING",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "loaded_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "original_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "sent_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}, {
+  "table_name": "tracks_view",
+  "column_name": "uuid_ts",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES"
+}]
