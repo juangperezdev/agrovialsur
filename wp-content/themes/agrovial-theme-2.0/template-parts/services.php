@@ -11,13 +11,13 @@ $services_query = new WP_Query($args);
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                <?php echo esc_html(get_theme_mod('services_badge', 'Nuestros Servicios')); ?>
+                <?php echo esc_html(get_option('services_badge', 'Nuestros Servicios')); ?>
             </span>
             <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
-                <?php echo esc_html(get_theme_mod('services_title', 'SERVICIOS DESTACADOS')); ?>
+                <?php echo esc_html(get_option('services_title', 'SERVICIOS DESTACADOS')); ?>
             </h2>
             <p class="text-muted-foreground text-lg">
-                <?php echo esc_html(get_theme_mod('services_desc', 'Movimiento de suelo, hormigón elaborado, obras de gas, infraestructura sanitaria y obras civiles. Soluciones integrales para cada proyecto.')); ?>
+                <?php echo esc_html(get_option('services_desc', 'Movimiento de suelo, hormigón elaborado, obras de gas, infraestructura sanitaria y obras civiles. Soluciones integrales para cada proyecto.')); ?>
             </p>
         </div>
 

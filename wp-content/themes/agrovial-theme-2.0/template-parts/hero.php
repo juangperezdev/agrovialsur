@@ -1,14 +1,14 @@
 <?php
-$hero_bg = get_theme_mod('hero_image', get_template_directory_uri() . '/assets/images/hero-construction.jpg');
-$hero_title = get_theme_mod('hero_title', 'INFRAESTRUCTURA PARA EL DESARROLLO PRIVADO EN RÍO NEGRO');
-$hero_badge = get_theme_mod('hero_badge', '+25 años de experiencia en infraestructura vial');
-$hero_desc = get_theme_mod('hero_description', 'Líderes en construcción y mantenimiento de infraestructura vial en la Patagonia. Proyectos públicos y privados con los más altos estándares de calidad.');
+$hero_bg = get_option('hero_image', get_template_directory_uri() . '/assets/images/hero-construction.jpg');
+$hero_title = get_option('hero_title', 'INFRAESTRUCTURA PARA EL DESARROLLO PRIVADO EN RÍO NEGRO');
+$hero_badge = get_option('hero_badge', '+25 años de experiencia en infraestructura vial');
+$hero_desc = get_option('hero_description', 'Líderes en construcción y mantenimiento de infraestructura vial en la Patagonia. Proyectos públicos y privados con los más altos estándares de calidad.');
 
 // Buttons
-$btn1_text = get_theme_mod('hero_btn1_text', 'Nuestros Servicios');
-$btn1_url = get_theme_mod('hero_btn1_url', '#servicios');
-$btn2_text = get_theme_mod('hero_btn2_text', 'Ver Proyectos');
-$btn2_url = get_theme_mod('hero_btn2_url', '#proyectos');
+$btn1_text = get_option('hero_btn1_text', 'Nuestros Servicios');
+$btn1_url = get_option('hero_btn1_url', '#servicios');
+$btn2_text = get_option('hero_btn2_text', 'Ver Proyectos');
+$btn2_url = get_option('hero_btn2_url', '#proyectos');
 
 // Stats
 $stats = [];
@@ -22,8 +22,8 @@ for ($i = 1; $i <= 4; $i++) {
         case 4: $default_val = '98%'; $default_lbl = 'Clientes Satisfechos'; break;
     }
     $stats[] = [
-        'value' => get_theme_mod("hero_stat{$i}_val", $default_val),
-        'label' => get_theme_mod("hero_stat{$i}_lbl", $default_lbl),
+        'value' => get_option("hero_stat{$i}_val", $default_val),
+        'label' => get_option("hero_stat{$i}_lbl", $default_lbl),
     ];
 }
 ?>

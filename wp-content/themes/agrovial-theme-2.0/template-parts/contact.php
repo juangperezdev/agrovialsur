@@ -1,7 +1,7 @@
 <?php
-$phone = get_theme_mod('contact_phone', '+52 (55) 1234-5678');
-$email = get_theme_mod('contact_email', 'contacto@constructoravial.mx');
-$address = get_theme_mod('contact_address', 'Ciudad de México, México');
+$phone = get_option('contact_phone', '+52 (55) 1234-5678');
+$email = get_option('contact_email', 'contacto@constructoravial.mx');
+$address = get_option('contact_address', 'Ciudad de México, México');
 ?>
 <section id="contacto" class="py-20 md:py-32 bg-background">
     <div class="container mx-auto px-4">

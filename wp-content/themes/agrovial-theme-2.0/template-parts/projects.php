@@ -15,13 +15,13 @@ $categories = get_terms(array(
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                <?php echo esc_html(get_theme_mod('projects_badge', 'Portafolio')); ?>
+                <?php echo esc_html(get_option('projects_badge', 'Portafolio')); ?>
             </span>
             <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
-                <?php echo esc_html(get_theme_mod('projects_title', 'PROYECTOS COMPLETADOS')); ?>
+                <?php echo esc_html(get_option('projects_title', 'PROYECTOS COMPLETADOS')); ?>
             </h2>
             <p class="text-muted-foreground text-lg">
-                <?php echo esc_html(get_theme_mod('projects_desc', 'Más de 500 proyectos exitosos en todo el país. Explore nuestra trayectoria en obras públicas y privadas.')); ?>
+                <?php echo esc_html(get_option('projects_desc', 'Más de 500 proyectos exitosos en todo el país. Explore nuestra trayectoria en obras públicas y privadas.')); ?>
             </p>
         </div>
 

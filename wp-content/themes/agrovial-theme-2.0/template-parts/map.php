@@ -1,6 +1,6 @@
 <?php
 // Main Map URL
-$map_embed_url = get_theme_mod('map_embed_url', 'https://maps.google.com/maps?q=-41.1335,-71.3103&z=7&output=embed');
+$map_embed_url = get_option('map_embed_url', 'https://maps.google.com/maps?q=-41.1335,-71.3103&z=7&output=embed');
 // Query Locations CPT
 $locations = [];
 $args = [

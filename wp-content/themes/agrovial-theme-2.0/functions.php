@@ -32,4 +32,4 @@ add_action( 'after_setup_theme', 'agrovial2_setup' );
 
 // Include Custom Post Types and Customizer options
 require get_template_directory() . '/inc/custom-post-types.php';
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/admin/theme-options.php';
