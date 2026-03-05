@@ -17,10 +17,12 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center gap-8">
                     <a href="#inicio" class="text-muted-foreground hover:text-primary transition-colors font-medium">Inicio</a>
+                    <a href="#infraestructura" class="text-muted-foreground hover:text-primary transition-colors font-medium">Infraestructura</a>
                     <a href="#servicios" class="text-muted-foreground hover:text-primary transition-colors font-medium">Servicios</a>
                     <a href="#proyectos" class="text-muted-foreground hover:text-primary transition-colors font-medium">Proyectos</a>
                     <a href="#nosotros" class="text-muted-foreground hover:text-primary transition-colors font-medium">Nosotros</a>
                     <a href="#ubicaciones" class="text-muted-foreground hover:text-primary transition-colors font-medium">Ubicaciones</a>
+                    <a href="#trabaja" class="text-muted-foreground hover:text-primary transition-colors font-medium">Trabaja con Nosotros</a>
                     <a href="#contacto" class="text-muted-foreground hover:text-primary transition-colors font-medium">Contacto</a>
                     
                     <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 gradient-primary shadow-button hover:opacity-90 transition-opacity text-primary-foreground">
@@ -40,10 +42,12 @@
             <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-border animate-fade-up">
                 <div class="flex flex-col gap-4">
                     <a href="#inicio" class="text-muted-foreground hover:text-primary transition-colors font-medium py-2 mobile-link">Inicio</a>
+                    <a href="#infraestructura" class="text-muted-foreground hover:text-primary transition-colors font-medium py-2 mobile-link">Infraestructura</a>
                     <a href="#servicios" class="text-muted-foreground hover:text-primary transition-colors font-medium py-2 mobile-link">Servicios</a>
                     <a href="#proyectos" class="text-muted-foreground hover:text-primary transition-colors font-medium py-2 mobile-link">Proyectos</a>
                     <a href="#nosotros" class="text-muted-foreground hover:text-primary transition-colors font-medium py-2 mobile-link">Nosotros</a>
                     <a href="#ubicaciones" class="text-muted-foreground hover:text-primary transition-colors font-medium py-2 mobile-link">Ubicaciones</a>
+                    <a href="#trabaja" class="text-muted-foreground hover:text-primary transition-colors font-medium py-2 mobile-link">Trabaja con Nosotros</a>
                     <a href="#contacto" class="text-muted-foreground hover:text-primary transition-colors font-medium py-2 mobile-link">Contacto</a>
                     
                     <button class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 gradient-primary shadow-button mt-2 text-primary-foreground">

@@ -6,7 +6,7 @@ $args = array(
 );
 $services_query = new WP_Query($args);
 ?>
-<section id="servicios" class="py-20 md:py-32 bg-background">
+<section id="servicios" class="py-20 md:py-32 bg-muted">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -17,7 +17,7 @@ $services_query = new WP_Query($args);
                 <?php echo esc_html(get_theme_mod('services_title', 'SERVICIOS DESTACADOS')); ?>
             </h2>
             <p class="text-muted-foreground text-lg">
-                <?php echo esc_html(get_theme_mod('services_desc', 'Ofrecemos soluciones integrales para el sector público y privado, adaptándonos a las necesidades específicas de cada proyecto.')); ?>
+                <?php echo esc_html(get_theme_mod('services_desc', 'Movimiento de suelo, hormigón elaborado, obras de gas, infraestructura sanitaria y obras civiles. Soluciones integrales para cada proyecto.')); ?>
             </p>
         </div>
 
@@ -53,8 +53,6 @@ $services_query = new WP_Query($args);
                             <?php the_title(); ?>
                         </h3>
                         <div class="text-muted-foreground mb-6"><?php the_content(); ?></div>
-
-
                     </div>
                 </div>
             <?php

@@ -48,10 +48,10 @@ $locations_json = json_encode($locations);
                 ENCUÉNTRANOS
             </span>
             <h2 class="font-display text-3xl md:text-4xl text-foreground mb-4">
-                Nuestras <span class="text-primary">Ubicaciones</span>
+                Presencia en <span class="text-primary">Río Negro</span>
             </h2>
             <p class="text-muted-foreground max-w-2xl mx-auto">
-                Presentes en toda la región patagónica para brindarte el mejor servicio
+                Mapa interactivo de nuestras obras y bases operativas en toda la provincia
             </p>
         </div>
 
@@ -100,12 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         const { Map } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
         map = new Map(mapElement, {
             zoom: 7,
             center: center,
-            mapId: 'DEMO_MAP_ID', // Replace with valid Map ID if using advanced markers fully
+            mapId: 'DEMO_MAP_ID',
         });
 
         infoWindow = new google.maps.InfoWindow();
@@ -121,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: loc.title,
             });
             
-            // Add click listener to marker
             marker.addListener("click", () => {
                 infoWindow.setContent(`
                     <div style="color: #000; padding: 5px;">
@@ -145,31 +143,16 @@ document.addEventListener('DOMContentLoaded', function() {
              
              if (marker) {
                  map.panTo(marker.getPosition());
-                 map.setZoom(14); // Zoom in
-                 google.maps.event.trigger(marker, 'click'); // Open tooltip
-                 
-                 // Scroll map into view smoothly
+                 map.setZoom(14);
+                 google.maps.event.trigger(marker, 'click');
                  mapElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-             } else {
-                 // Fallback if no marker (no coords)
-                 const lat = card.getAttribute('data-lat');
-                 const lng = card.getAttribute('data-lng');
-                 if(lat && lng) {
-                     // Should have been caught by marker loop, but safety check
-                 } else {
-                    // Fallback to Google Maps link logic if we wanted, but request says "tooltip over map"
-                    // Could alert user: "Coordenadas no definidas"
-                 }
              }
         });
     });
 
-    // Check if google is available, if not wait for logic (script is async)
     if (typeof google === 'object' && typeof google.maps === 'object') {
         initMap();
     } else {
-        // Simple polling or callback handling would be better properly integrated
-        // But since we enqueued with no callback name in functions.php, we rely on window load or similar
         window.addEventListener('load', initMap);
     }
 });

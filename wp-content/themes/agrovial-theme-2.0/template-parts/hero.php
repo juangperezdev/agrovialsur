@@ -1,8 +1,8 @@
 <?php
 $hero_bg = get_theme_mod('hero_image', get_template_directory_uri() . '/assets/images/hero-construction.jpg');
-$hero_title = get_theme_mod('hero_title', 'CONSTRUIMOS EL FUTURO VIAL');
+$hero_title = get_theme_mod('hero_title', 'INFRAESTRUCTURA PARA EL DESARROLLO PRIVADO EN RÍO NEGRO');
 $hero_badge = get_theme_mod('hero_badge', '+25 años de experiencia en infraestructura vial');
-$hero_desc = get_theme_mod('hero_description', 'Líderes en construcción y mantenimiento de infraestructura vial. Proyectos públicos y privados con los más altos estándares de calidad.');
+$hero_desc = get_theme_mod('hero_description', 'Líderes en construcción y mantenimiento de infraestructura vial en la Patagonia. Proyectos públicos y privados con los más altos estándares de calidad.');
 
 // Buttons
 $btn1_text = get_theme_mod('hero_btn1_text', 'Nuestros Servicios');
