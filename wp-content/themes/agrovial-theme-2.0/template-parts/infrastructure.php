@@ -46,23 +46,33 @@ $infra_items = [
                 <!-- Gradient Top Bar -->
                 <div class="h-2 gradient-primary"></div>
                 
-                <div class="p-8">
-                    <!-- Icon -->
-                    <div class="w-16 h-16 rounded-xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform overflow-hidden <?php echo empty($item['image']) ? '' : 'p-0 bg-none'; ?>">
-                        <?php if (!empty($item['image'])) : ?>
-                            <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="w-full h-full object-cover" />
-                        <?php else : ?>
+                <?php if (!empty($item['image'])) : ?>
+                    <div class="w-full aspect-square overflow-hidden bg-muted">
+                        <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="font-display text-3xl md:text-4xl text-foreground mb-3">
+                            <?php echo esc_html($item['title']); ?>
+                        </h3>
+                        <div class="text-muted-foreground leading-relaxed">
+                            <?php echo wp_kses_post($item['desc']); ?>
+                        </div>
+                    </div>
+                <?php else : ?>
+                    <div class="p-6 md:p-8">
+                        <!-- Icon -->
+                        <div class="w-16 h-16 rounded-xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <?php echo $item['icon']; ?>
-                        <?php endif; ?>
-                    </div>
+                        </div>
 
-                    <h3 class="font-display text-3xl md:text-4xl text-foreground mb-3">
-                        <?php echo esc_html($item['title']); ?>
-                    </h3>
-                    <div class="text-muted-foreground leading-relaxed">
-                        <?php echo wp_kses_post($item['desc']); ?>
+                        <h3 class="font-display text-3xl md:text-4xl text-foreground mb-3">
+                            <?php echo esc_html($item['title']); ?>
+                        </h3>
+                        <div class="text-muted-foreground leading-relaxed">
+                            <?php echo wp_kses_post($item['desc']); ?>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
             </div>
             <?php endforeach; ?>
         </div>

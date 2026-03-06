@@ -184,7 +184,7 @@ function agrovial2_options_infra_page() {
                         <td>
                             <?php $infra_img = get_option("infra_{$i}_image"); ?>
                             <div style="margin-bottom: 10px;">
-                                <img id="infra_<?php echo $i; ?>_preview" src="<?php echo esc_url($infra_img); ?>" style="max-width: 100px; height: auto; border: 1px solid #ddd; padding: 4px; border-radius: 4px; background: #fff; <?php echo empty($infra_img) ? 'display: none;' : ''; ?>" />
+                                <img id="infra_<?php echo $i; ?>_preview" src="<?php echo esc_url($infra_img); ?>" style="width: 100px; height: 100px; object-fit: cover; border: 1px solid #ddd; padding: 4px; border-radius: 4px; background: #fff; <?php echo empty($infra_img) ? 'display: none;' : ''; ?>" />
                             </div>
                             <div style="margin-bottom: 15px;">
                                 <input type="hidden" name="infra_<?php echo $i; ?>_image" id="infra_<?php echo $i; ?>_image" value="<?php echo esc_attr($infra_img); ?>" />
