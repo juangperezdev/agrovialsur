@@ -83,7 +83,7 @@ $stat3_label = get_option('whyus_stat_3_label', 'Años de trayectoria');
                     <h3 class="font-display text-xl text-card-foreground mb-2">
                         <?php echo esc_html($feature['title']); ?>
                     </h3>
-                    <p class="text-muted-foreground text-sm"><?php echo esc_html($feature['description']); ?></p>
+                    <div class="text-muted-foreground text-sm"><?php echo wp_kses_post($feature['description']); ?></div>
                 </div>
             <?php endforeach; ?>
         </div>

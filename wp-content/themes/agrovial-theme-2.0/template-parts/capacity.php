@@ -62,9 +62,9 @@ $capacity_items = [
                 <h3 class="font-display text-2xl text-primary-foreground mb-3">
                     <?php echo esc_html($item['title']); ?>
                 </h3>
-                <p class="text-primary-foreground/70 text-sm leading-relaxed">
-                    <?php echo esc_html($item['desc']); ?>
-                </p>
+                <div class="text-primary-foreground/70 text-sm leading-relaxed">
+                    <?php echo wp_kses_post($item['desc']); ?>
+                </div>
             </div>
             <?php endforeach; ?>
         </div>

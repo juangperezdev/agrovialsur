@@ -16,9 +16,9 @@ $services_query = new WP_Query($args);
             <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
                 <?php echo esc_html(get_option('services_title', 'SERVICIOS DESTACADOS')); ?>
             </h2>
-            <p class="text-muted-foreground text-lg">
-                <?php echo esc_html(get_option('services_desc', 'Movimiento de suelo, hormigón elaborado, obras de gas, infraestructura sanitaria y obras civiles. Soluciones integrales para cada proyecto.')); ?>
-            </p>
+            <div class="text-muted-foreground text-lg">
+                <?php echo wp_kses_post(get_option('services_desc', 'Movimiento de suelo, hormigón elaborado, obras de gas, infraestructura sanitaria y obras civiles. Soluciones integrales para cada proyecto.')); ?>
+            </div>
         </div>
 
         <!-- Services Grid -->

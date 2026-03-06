@@ -102,7 +102,7 @@ function agrovial2_options_hero_page() {
                 </tr>
                 <tr valign="top">
                     <th scope="row">Descripción</th>
-                    <td><textarea name="hero_description" rows="3" class="large-text"><?php echo esc_textarea(get_option('hero_description', 'Líderes en construcción y mantenimiento de infraestructura vial en la Patagonia. Proyectos públicos y privados con los más altos estándares de calidad.')); ?></textarea></td>
+                    <td><?php wp_editor(get_option('hero_description', 'Líderes en construcción y mantenimiento de infraestructura vial en la Patagonia. Proyectos públicos y privados con los más altos estándares de calidad.'), 'hero_description', array('textarea_name' => 'hero_description', 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?></td>
                 </tr>
                 <tr valign="top">
                     <th scope="row">URL Imagen de Fondo</th>
@@ -161,7 +161,7 @@ function agrovial2_options_infra_page() {
                      <tr valign="top">
                         <th scope="row">Tarjeta <?php echo $i; ?></th>
                         <td>Título:<br><input type="text" name="infra_<?php echo $i; ?>_title" value="<?php echo esc_attr(get_option("infra_{$i}_title", ($i==1?'Industria':($i==2?'Minería':'Desarrollo Urbano')))); ?>" class="regular-text" /><br><br>
-                            Descripción:<br><textarea name="infra_<?php echo $i; ?>_desc" rows="3" class="large-text"><?php echo esc_textarea(get_option("infra_{$i}_desc")); ?></textarea></td>
+                            Descripción:<br><?php wp_editor(get_option("infra_{$i}_desc"), "infra_desc_{$i}", array('textarea_name' => "infra_{$i}_desc", 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?></td>
                     </tr>
                 <?php endfor; ?>
             </table>
@@ -191,7 +191,7 @@ function agrovial2_options_servicios_page() {
                 </tr>
                 <tr valign="top">
                     <th scope="row">Descripción</th>
-                    <td><textarea name="services_desc" rows="3" class="large-text"><?php echo esc_textarea(get_option('services_desc', 'Movimiento de suelo, hormigón elaborado...')); ?></textarea></td>
+                    <td><?php wp_editor(get_option('services_desc', 'Movimiento de suelo, hormigón elaborado...'), 'services_desc', array('textarea_name' => 'services_desc', 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?></td>
                 </tr>
             </table>
             <?php submit_button('Guardar Servicios'); ?>
@@ -218,7 +218,7 @@ function agrovial2_options_capacidad_page() {
                         <th scope="row">Tarjeta <?php echo $i; ?></th>
                         <td>Valor grande:<br><input type="text" name="capacity_<?php echo $i; ?>_value" value="<?php echo esc_attr(get_option("capacity_{$i}_value", $def_val)); ?>" class="regular-text" /><br><br>
                             Título:<br><input type="text" name="capacity_<?php echo $i; ?>_title" value="<?php echo esc_attr(get_option("capacity_{$i}_title", $def_tit)); ?>" class="regular-text" /><br><br>
-                            Descripción:<br><textarea name="capacity_<?php echo $i; ?>_desc" rows="3" class="large-text"><?php echo esc_textarea(get_option("capacity_{$i}_desc")); ?></textarea></td>
+                            Descripción:<br><?php wp_editor(get_option("capacity_{$i}_desc"), "capacity_desc_{$i}", array('textarea_name' => "capacity_{$i}_desc", 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?></td>
                     </tr>
                 <?php endfor; ?>
             </table>
@@ -253,7 +253,7 @@ function agrovial2_options_whyus_page() {
                      <tr valign="top">
                         <th scope="row">Feature <?php echo $i; ?></th>
                         <td>Título:<br><input type="text" name="whyus_feat_<?php echo $i; ?>_title" value="<?php echo esc_attr(get_option("whyus_feat_{$i}_title")); ?>" class="regular-text" /><br><br>
-                            Descripción:<br><textarea name="whyus_feat_<?php echo $i; ?>_desc" rows="2" class="large-text"><?php echo esc_textarea(get_option("whyus_feat_{$i}_desc")); ?></textarea></td>
+                            Descripción:<br><?php wp_editor(get_option("whyus_feat_{$i}_desc"), "whyus_feat_desc_{$i}", array('textarea_name' => "whyus_feat_{$i}_desc", 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?></td>
                     </tr>
                 <?php endfor; ?>
             </table>
@@ -283,7 +283,7 @@ function agrovial2_options_proyectos_page() {
                 </tr>
                 <tr valign="top">
                     <th scope="row">Descripción</th>
-                    <td><textarea name="projects_desc" rows="3" class="large-text"><?php echo esc_textarea(get_option('projects_desc', 'Más de 500 proyectos exitosos en todo el país. Explore nuestra trayectoria en obras públicas y privadas.')); ?></textarea></td>
+                    <td><?php wp_editor(get_option('projects_desc', 'Más de 500 proyectos exitosos en todo el país. Explore nuestra trayectoria en obras públicas y privadas.'), 'projects_desc', array('textarea_name' => 'projects_desc', 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?></td>
                 </tr>
             </table>
             <?php submit_button('Guardar Proyectos'); ?>

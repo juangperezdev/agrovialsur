@@ -20,9 +20,9 @@ $categories = get_terms(array(
             <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
                 <?php echo esc_html(get_option('projects_title', 'PROYECTOS COMPLETADOS')); ?>
             </h2>
-            <p class="text-muted-foreground text-lg">
-                <?php echo esc_html(get_option('projects_desc', 'Más de 500 proyectos exitosos en todo el país. Explore nuestra trayectoria en obras públicas y privadas.')); ?>
-            </p>
+            <div class="text-muted-foreground text-lg">
+                <?php echo wp_kses_post(get_option('projects_desc', 'Más de 500 proyectos exitosos en todo el país. Explore nuestra trayectoria en obras públicas y privadas.')); ?>
+            </div>
         </div>
 
         <!-- Filters -->

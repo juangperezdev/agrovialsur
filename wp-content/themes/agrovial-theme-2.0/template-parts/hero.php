@@ -48,9 +48,9 @@ for ($i = 1; $i <= 4; $i++) {
                 <?php echo wp_kses_post($hero_title); ?>
             </h1>
 
-            <p class="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8 animate-fade-up font-body" style="animation-delay: 0.2s">
-                <?php echo esc_html($hero_desc); ?>
-            </p>
+            <div class="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8 animate-fade-up font-body" style="animation-delay: 0.2s">
+                <?php echo wp_kses_post($hero_desc); ?>
+            </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="animation-delay: 0.3s">
                 <?php if ($btn1_text) : ?>

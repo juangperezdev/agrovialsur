@@ -52,9 +52,9 @@ $infra_items = [
                     <h3 class="font-display text-3xl md:text-4xl text-foreground mb-3">
                         <?php echo esc_html($item['title']); ?>
                     </h3>
-                    <p class="text-muted-foreground leading-relaxed">
-                        <?php echo esc_html($item['desc']); ?>
-                    </p>
+                    <div class="text-muted-foreground leading-relaxed">
+                        <?php echo wp_kses_post($item['desc']); ?>
+                    </div>
                 </div>
             </div>
             <?php endforeach; ?>
