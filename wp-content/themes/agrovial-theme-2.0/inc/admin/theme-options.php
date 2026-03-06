@@ -34,7 +34,11 @@ function agrovial2_register_settings() {
     for ($i=1; $i<=4; $i++) { register_setting('agrovial_options_hero', "hero_stat{$i}_val"); register_setting('agrovial_options_hero', "hero_stat{$i}_lbl"); }
 
     // Infraestructura
-    for ($i=1; $i<=3; $i++) { register_setting('agrovial_options_infra', "infra_{$i}_title"); register_setting('agrovial_options_infra', "infra_{$i}_desc"); }
+    for ($i=1; $i<=3; $i++) { 
+        register_setting('agrovial_options_infra', "infra_{$i}_title"); 
+        register_setting('agrovial_options_infra', "infra_{$i}_desc"); 
+        register_setting('agrovial_options_infra', "infra_{$i}_image"); 
+    }
 
     // Servicios
     register_setting('agrovial_options_servicios', 'services_badge');
@@ -177,14 +181,50 @@ function agrovial2_options_infra_page() {
                 <?php for ($i = 1; $i <= 3; $i++) : ?>
                      <tr valign="top">
                         <th scope="row">Tarjeta <?php echo $i; ?></th>
-                        <td>Título:<br><input type="text" name="infra_<?php echo $i; ?>_title" value="<?php echo esc_attr(get_option("infra_{$i}_title", ($i==1?'Industria':($i==2?'Minería':'Desarrollo Urbano')))); ?>" class="regular-text" /><br><br>
-                            Descripción:<br><?php wp_editor(get_option("infra_{$i}_desc"), "infra_desc_{$i}", array('textarea_name' => "infra_{$i}_desc", 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?></td>
+                        <td>
+                            <?php $infra_img = get_option("infra_{$i}_image"); ?>
+                            <div style="margin-bottom: 10px;">
+                                <img id="infra_<?php echo $i; ?>_preview" src="<?php echo esc_url($infra_img); ?>" style="max-width: 100px; height: auto; border: 1px solid #ddd; padding: 4px; border-radius: 4px; background: #fff; <?php echo empty($infra_img) ? 'display: none;' : ''; ?>" />
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <input type="hidden" name="infra_<?php echo $i; ?>_image" id="infra_<?php echo $i; ?>_image" value="<?php echo esc_attr($infra_img); ?>" />
+                                <button type="button" class="button button-secondary infra-img-btn" data-target="infra_<?php echo $i; ?>">Seleccionar Imagen/Icono</button>
+                                <button type="button" class="button button-link-delete infra-img-remove" data-target="infra_<?php echo $i; ?>" style="<?php echo empty($infra_img) ? 'display: none;' : ''; ?> color: #b32d2e; text-decoration: none;">Eliminar</button>
+                            </div>
+                            Título:<br><input type="text" name="infra_<?php echo $i; ?>_title" value="<?php echo esc_attr(get_option("infra_{$i}_title", ($i==1?'Industria':($i==2?'Minería':'Desarrollo Urbano')))); ?>" class="regular-text" /><br><br>
+                            Descripción:<br><?php wp_editor(get_option("infra_{$i}_desc"), "infra_desc_{$i}", array('textarea_name' => "infra_{$i}_desc", 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?>
+                        </td>
                     </tr>
                 <?php endfor; ?>
             </table>
             <?php submit_button('Guardar Infraestructura'); ?>
         </form>
     </div>
+    <script>
+    jQuery(document).ready(function($){
+        var mediaUploader;
+        $('.infra-img-btn').click(function(e) {
+            e.preventDefault();
+            var targetId = $(this).data('target');
+            if (mediaUploader) { mediaUploader.off('select'); }
+            else { mediaUploader = wp.media.frames.file_frame = wp.media({ title: 'Seleccionar Imagen/Icono', button: { text: 'Usar imagen' }, multiple: false }); }
+            mediaUploader.on('select', function() { 
+                var attachment = mediaUploader.state().get('selection').first().toJSON(); 
+                $('#' + targetId + '_image').val(attachment.url); 
+                $('#' + targetId + '_preview').attr('src', attachment.url).show();
+                $('.infra-img-remove[data-target="'+targetId+'"]').show();
+            });
+            mediaUploader.open();
+        });
+        $('.infra-img-remove').click(function(e) {
+            e.preventDefault();
+            var targetId = $(this).data('target');
+            $('#' + targetId + '_image').val('');
+            $('#' + targetId + '_preview').attr('src', '').hide();
+            $(this).hide();
+        });
+    });
+    </script>
     <?php
 }
 
