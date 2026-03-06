@@ -7,7 +7,7 @@ $address = get_option('contact_address', 'Ciudad de México, México');
     <div class="container mx-auto px-4">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary-alt text-sm font-medium mb-4">
                 Contacto
             </span>
             <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">

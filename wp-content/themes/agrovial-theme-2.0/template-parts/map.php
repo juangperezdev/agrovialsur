@@ -93,15 +93,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let markers = [];
     let infoWindow;
 
-    async function initMap() {
-        if (typeof google === 'undefined') {
-            console.error('Google Maps API not loaded');
+    function initMap() {
+        if (typeof google === 'undefined' || typeof google.maps === 'undefined' || typeof google.maps.Map === 'undefined' || typeof google.maps.marker === 'undefined') {
+            setTimeout(initMap, 100);
             return;
         }
-        
-        const { Map } = await google.maps.importLibrary("maps");
 
-        map = new Map(mapElement, {
+        map = new google.maps.Map(mapElement, {
             zoom: 7,
             center: center,
             mapId: 'DEMO_MAP_ID',
@@ -114,21 +112,33 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const position = { lat: parseFloat(loc.lat), lng: parseFloat(loc.lng) };
             
-            const marker = new google.maps.Marker({
+            const pin = new google.maps.marker.PinElement({
+                background: '#e11d48',
+                borderColor: '#881337',
+                glyphColor: '#ffffff',
+            });
+
+            const marker = new google.maps.marker.AdvancedMarkerElement({
                 position: position,
                 map: map,
                 title: loc.title,
+                content: pin
             });
             
-            marker.addListener("click", () => {
+            pin.style.cursor = 'pointer';
+            
+            const clickHandler = () => {
                 infoWindow.setContent(`
                     <div style="color: #000; padding: 5px;">
                         <h3 style="margin: 0 0 5px 0; font-weight: bold;">${loc.title}</h3>
                         <p style="margin: 0;">${loc.address}</p>
                     </div>
                 `);
-                infoWindow.open(map, marker);
-            });
+                infoWindow.open({ anchor: marker, map: map });
+            };
+            
+            marker.addListener('gmp-click', clickHandler);
+            marker._handleClick = clickHandler;
 
             markers.push(marker);
         });
@@ -142,18 +152,19 @@ document.addEventListener('DOMContentLoaded', function() {
              const marker = markers[index];
              
              if (marker) {
-                 map.panTo(marker.getPosition());
+                 map.panTo(marker.position);
                  map.setZoom(14);
-                 google.maps.event.trigger(marker, 'click');
+                 if (marker._handleClick) marker._handleClick();
                  mapElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
              }
         });
     });
 
-    if (typeof google === 'object' && typeof google.maps === 'object') {
+    if (window.isGoogleMapsLoaded) {
         initMap();
     } else {
-        window.addEventListener('load', initMap);
+        window.initMapFunctions = window.initMapFunctions || [];
+        window.initMapFunctions.push(initMap);
     }
 });
 </script>

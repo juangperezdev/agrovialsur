@@ -35,12 +35,12 @@ $features = [
     ]
 ];
 ?>
-<section id="nosotros" class="py-20 md:py-32 bg-secondary">
+<section id="nosotros" class="py-20 md:py-32 bg-muted">
     <div class="container mx-auto px-4">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <!-- Content -->
             <div>
-                <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary-alt text-sm font-medium mb-4">
                     <?php echo esc_html($about_badge); ?>
                 </span>
                 <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-secondary-foreground mb-6">

@@ -104,6 +104,9 @@ add_action('add_meta_boxes', 'agrovial_add_meta_boxes');
 function agrovial_project_meta_callback($post) {
     $location = get_post_meta($post->ID, '_project_location', true);
     $year = get_post_meta($post->ID, '_project_year', true);
+    $client = get_post_meta($post->ID, '_project_client', true);
+    $lat = get_post_meta($post->ID, '_project_lat', true);
+    $lng = get_post_meta($post->ID, '_project_lng', true);
     
     // Stats array storage logic can be complex, simplifying to text inputs for now
     $stat1_label = get_post_meta($post->ID, '_project_stat1_label', true);
@@ -121,6 +124,20 @@ function agrovial_project_meta_callback($post) {
         <label for="project_year">Año:</label>
         <input type="text" id="project_year" name="project_year" value="<?php echo esc_attr($year); ?>" class="widefat">
     </p>
+    <p>
+        <label for="project_client">Cliente:</label>
+        <input type="text" id="project_client" name="project_client" value="<?php echo esc_attr($client); ?>" class="widefat">
+    </p>
+    <div style="display: flex; gap: 1rem;">
+        <p style="flex: 1;">
+            <label for="project_lat">Latitud:</label>
+            <input type="text" id="project_lat" name="project_lat" value="<?php echo esc_attr($lat); ?>" class="widefat">
+        </p>
+        <p style="flex: 1;">
+            <label for="project_lng">Longitud:</label>
+            <input type="text" id="project_lng" name="project_lng" value="<?php echo esc_attr($lng); ?>" class="widefat">
+        </p>
+    </div>
     <hr>
     <p><strong>Estadística 1</strong></p>
     <p>
@@ -208,6 +225,9 @@ function agrovial_save_meta_boxes($post_id) {
     if (isset($_POST['agrovial_project_meta_nonce']) && wp_verify_nonce($_POST['agrovial_project_meta_nonce'], 'agrovial_save_project_meta')) {
         if (isset($_POST['project_location'])) update_post_meta($post_id, '_project_location', sanitize_text_field($_POST['project_location']));
         if (isset($_POST['project_year'])) update_post_meta($post_id, '_project_year', sanitize_text_field($_POST['project_year']));
+        if (isset($_POST['project_client'])) update_post_meta($post_id, '_project_client', sanitize_text_field($_POST['project_client']));
+        if (isset($_POST['project_lat'])) update_post_meta($post_id, '_project_lat', sanitize_text_field($_POST['project_lat']));
+        if (isset($_POST['project_lng'])) update_post_meta($post_id, '_project_lng', sanitize_text_field($_POST['project_lng']));
         if (isset($_POST['project_stat1_label'])) update_post_meta($post_id, '_project_stat1_label', sanitize_text_field($_POST['project_stat1_label']));
         if (isset($_POST['project_stat1_value'])) update_post_meta($post_id, '_project_stat1_value', sanitize_text_field($_POST['project_stat1_value']));
         if (isset($_POST['project_stat2_label'])) update_post_meta($post_id, '_project_stat2_label', sanitize_text_field($_POST['project_stat2_label']));

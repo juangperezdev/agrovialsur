@@ -1,7 +1,43 @@
 /*
-Theme Name: Agrovial Sur
+Theme Name: Agrovial Sur 1.0
 Theme URI: https://agrovialsur.com
 Author: Agrovial Sur
 Description: Custom theme for Agrovial Sur converted from React.
 Version: 1.0
 */
+
+:root {
+    /* New Paleta Primaria */
+    --primary: 154 72% 21%;
+    /* Verde Institucional #0F5C3A */
+    --primary-alt: 204 35% 17%;
+    /* Azul Institucional #1C2E3A */
+    --muted-foreground: 0 0% 29%;
+    /* Gris Descriptor #4A4A4A */
+
+    /* New Paleta Secundaria */
+    --secondary: 64 75% 60%;
+    /* Amarillo Infraestructura #DBE64C */
+    --primary-medium: 146 50% 36%;
+    /* Verde Medio #2E8B57 */
+    --primary-technical: 218 65% 34%;
+    /* Azul Técnico #1E488F */
+    --background: 66 33% 95%;
+    /* Blanco Técnico #F6F7ED */
+    --foreground: 240 4% 10%;
+    /* Negro Texto #19191B */
+
+    /* Component Colors */
+    --card-foreground: 240 4% 10%;
+    --popover-foreground: 240 4% 10%;
+    --secondary-foreground: 240 4% 10%;
+    --accent: 64 75% 60%;
+    --accent-foreground: 240 4% 10%;
+    --muted: 66 20% 90%;
+
+    /* Update Gradients with new colors */
+    --gradient-hero: linear-gradient(135deg, hsl(204 35% 17% / 0.9) 0%, hsl(204 35% 14% / 0.95) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(154 72% 21%) 0%, hsl(146 50% 36%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(64 75% 60%) 0%, hsl(50 90% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(66 33% 95%) 100%);
+}

@@ -10,13 +10,14 @@ function agrovial2_scripts() {
     wp_enqueue_style( 'agrovial2-theme-style', get_stylesheet_uri() );
 
     // Enqueue Google Maps API (Async)
-    wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVcTLO9TEv0P4ZG1dwDeK0_cHsKvRwGxY&loading=async', array(), null, true );
+    wp_enqueue_script( 'google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVcTLO9TEv0P4ZG1dwDeK0_cHsKvRwGxY&callback=initGoogleMapsCallback&loading=async&libraries=marker', array(), null, true );
+    wp_add_inline_script( 'google-maps-api', 'window.initMapFunctions = window.initMapFunctions || []; window.initGoogleMapsCallback = function() { window.isGoogleMapsLoaded = true; window.initMapFunctions.forEach(function(fn) { fn(); }); };', 'before' );
 }
 add_action( 'wp_enqueue_scripts', 'agrovial2_scripts' );
 
 // Add async attribute to Google Maps script
 function agrovial2_add_async_attribute($tag, $handle) {
-    if ('google-maps' !== $handle) {
+    if ('google-maps-api' !== $handle) {
         return $tag;
     }
     return str_replace(' src', ' async src', $tag);

@@ -18,10 +18,10 @@ $categories = get_terms(array(
                 <?php echo esc_html(get_option('projects_badge', 'Portafolio')); ?>
             </span>
             <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
-                <?php echo esc_html(get_option('projects_title', 'PROYECTOS COMPLETADOS')); ?>
+                <?php echo esc_html(get_option('projects_title', 'PROYECTOS DESTACADOS')); ?>
             </h2>
             <div class="text-muted-foreground text-lg">
-                <?php echo wp_kses_post(get_option('projects_desc', 'Más de 500 proyectos exitosos en todo el país. Explore nuestra trayectoria en obras públicas y privadas.')); ?>
+                <?php echo wp_kses_post(get_option('projects_desc', '¿Dónde trabajamos? Conozca nuestras principales obras de infraestructura en la región.')); ?>
             </div>
         </div>
 
@@ -46,6 +46,7 @@ $categories = get_terms(array(
         <!-- Projects Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="projects-grid">
             <?php
+            $map_projects = [];
             if ($projects_query->have_posts()) :
                 $delay_counter = 0;
                 while ($projects_query->have_posts()) : $projects_query->the_post();
@@ -59,6 +60,18 @@ $categories = get_terms(array(
                     $stat1_value = get_post_meta(get_the_ID(), '_project_stat1_value', true);
                     $stat2_label = get_post_meta(get_the_ID(), '_project_stat2_label', true);
                     $stat2_value = get_post_meta(get_the_ID(), '_project_stat2_value', true);
+                    
+                    $lat = get_post_meta(get_the_ID(), '_project_lat', true);
+                    $lng = get_post_meta(get_the_ID(), '_project_lng', true);
+                    if (!empty($lat) && !empty($lng)) {
+                        $map_projects[] = [
+                            'title' => get_the_title(),
+                            'lat' => $lat,
+                            'lng' => $lng,
+                            'link' => get_permalink(),
+                            'address' => $location
+                        ];
+                    }
                     
                     $delay = $delay_counter * 0.1;
                     $delay_counter++;
@@ -122,9 +135,11 @@ $categories = get_terms(array(
                             <?php endif; ?>
                         </div>
 
-                        <h3 class="font-display text-2xl text-card-foreground mb-2 group-hover:text-primary transition-colors">
-                            <?php the_title(); ?>
-                        </h3>
+                        <a href="<?php the_permalink(); ?>" class="block">
+                            <h3 class="font-display text-2xl text-card-foreground mb-2 group-hover:text-primary transition-colors">
+                                <?php the_title(); ?>
+                            </h3>
+                        </a>
 
                         <div class="text-muted-foreground text-sm leading-relaxed mb-4">
                             <?php the_excerpt(); ?>
@@ -147,11 +162,28 @@ $categories = get_terms(array(
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
         </div>
+        <div class="mt-20">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">
+                    MAPA DE OBRAS
+                </span>
+                <h3 class="font-display text-3xl md:text-4xl text-foreground mb-4">
+                    Nuestros Proyectos en el Mapa
+                </h3>
+            </div>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg border border-border" style="min-height: 500px; height: 500px; width: 100%;">
+                 <div id="projects-map-container" style="width: 100%; height: 100%; min-height: 500px;"></div>
+            </div>
+        </div>
     </div>
 </section>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    const mapProjects = <?php echo json_encode($map_projects) ?: '[]'; ?>;
+    console.log('Processed PHP mapProjects:', mapProjects);
+
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectItems = document.querySelectorAll('.project-item');
 
@@ -180,5 +212,87 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    const mapElement = document.getElementById('projects-map-container');
+    if (mapElement) {
+        let center = { lat: -41.1335, lng: -71.3103 }; // Fallback
+        if (mapProjects && mapProjects.length > 0) {
+            center = { lat: parseFloat(mapProjects[0].lat), lng: parseFloat(mapProjects[0].lng) };
+        }
+
+        function initProjectsMap() {
+            console.log('initProjectsMap called', typeof google);
+            if (typeof google === 'undefined' || typeof google.maps === 'undefined' || typeof google.maps.Map === 'undefined' || typeof google.maps.marker === 'undefined') {
+                console.log('Waiting for google maps API to fully load in projects map...');
+                setTimeout(initProjectsMap, 100);
+                return;
+            }
+
+            try {
+                console.log('Rendering Projects Map at center:', center, 'with projects:', mapProjects);
+                const map = new google.maps.Map(mapElement, {
+                    zoom: 6,
+                    center: { lat: parseFloat(center.lat) || -41.1335, lng: parseFloat(center.lng) || -71.3103 },
+                    mapId: 'DEMO_MAP_ID_2',
+                });
+
+                const infoWindow = new google.maps.InfoWindow();
+
+                if (mapProjects) {
+                    mapProjects.forEach((loc) => {
+                        if (!loc.lat || !loc.lng) return;
+                        
+                        const position = { lat: parseFloat(loc.lat), lng: parseFloat(loc.lng) };
+                        if (isNaN(position.lat) || isNaN(position.lng)) {
+                            console.error('Invalid position found in project:', loc);
+                            return;
+                        }
+
+                        const pin = new google.maps.marker.PinElement({
+                            background: '#e11d48',
+                            borderColor: '#881337',
+                            glyphColor: '#ffffff',
+                        });
+
+                        const marker = new google.maps.marker.AdvancedMarkerElement({
+                            position: position,
+                            map: map,
+                            title: loc.title,
+                            content: pin
+                        });
+                        
+                        pin.style.cursor = 'pointer';
+                        
+                        marker.addListener("gmp-click", () => {
+                            window.location.href = loc.link;
+                        });
+
+                        pin.addEventListener("mouseenter", () => {
+                             infoWindow.setContent(`
+                                 <div style="color: #000; padding: 5px; text-align: center;">
+                                     <h3 style="margin: 0 0 5px 0; font-weight: bold; font-size: 14px;">${loc.title}</h3>
+                                     <p style="margin: 0; font-size: 12px;">Haz clic para ver más</p>
+                                 </div>
+                             `);
+                             infoWindow.open({ anchor: marker, map: map });
+                        });
+
+                        pin.addEventListener("mouseleave", () => {
+                             infoWindow.close();
+                        });
+                    });
+                }
+            } catch (error) {
+                console.error('Error generating Projects Map:', error);
+            }
+        }
+
+        if (window.isGoogleMapsLoaded) {
+            initProjectsMap();
+        } else {
+            window.initMapFunctions = window.initMapFunctions || [];
+            window.initMapFunctions.push(initProjectsMap);
+        }
+    }
 });
 </script>

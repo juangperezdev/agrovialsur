@@ -6,11 +6,11 @@ $args = array(
 );
 $testimonials_query = new WP_Query($args);
 ?>
-<section class="py-20 md:py-32 bg-secondary overflow-hidden">
+<section class="py-20 md:py-32 bg-muted overflow-hidden">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary-alt text-sm font-medium mb-4">
                 Testimonios
             </span>
             <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-secondary-foreground mb-4">

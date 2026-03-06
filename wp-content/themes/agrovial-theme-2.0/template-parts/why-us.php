@@ -42,18 +42,18 @@ $stat2_label = get_option('whyus_stat_2_label', 'Certificación');
 $stat3_val = get_option('whyus_stat_3_val', '+25');
 $stat3_label = get_option('whyus_stat_3_label', 'Años de trayectoria');
 ?>
-<section id="nosotros" class="py-20 md:py-32 bg-secondary">
+<section id="nosotros" class="py-20 md:py-32 bg-muted">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary-alt text-sm font-medium mb-4">
                 Por Qué Elegirnos
             </span>
             <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-secondary-foreground mb-4">
                 POR QUÉ ELEGIR <span class="text-gradient">AGROVIAL SUR</span>
             </h2>
             <p class="text-secondary-foreground/80 text-lg mb-8">
-                Más de 25 años construyendo infraestructura de calidad en Río Negro. Nuestra experiencia y compromiso nos distinguen.
+                Infraestructura con capacidad operativa real para el desarrollo productivo de Río Negro.
             </p>
 
             <!-- Stats inline -->

@@ -106,9 +106,11 @@
                                 <?php endif; ?>
                             </div>
 
-                            <h3 class="font-display text-2xl text-card-foreground mb-2 group-hover:text-primary transition-colors">
-                                <?php the_title(); ?>
-                            </h3>
+                            <a href="<?php the_permalink(); ?>" class="block">
+                                <h3 class="font-display text-2xl text-card-foreground mb-2 group-hover:text-primary transition-colors">
+                                    <?php the_title(); ?>
+                                </h3>
+                            </a>
 
                             <div class="text-muted-foreground text-sm leading-relaxed">
                                 <?php the_excerpt(); ?>
