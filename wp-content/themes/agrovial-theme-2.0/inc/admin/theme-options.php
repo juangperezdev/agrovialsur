@@ -105,10 +105,15 @@ function agrovial2_options_hero_page() {
                     <td><?php wp_editor(get_option('hero_description', 'Líderes en construcción y mantenimiento de infraestructura vial en la Patagonia. Proyectos públicos y privados con los más altos estándares de calidad.'), 'hero_description', array('textarea_name' => 'hero_description', 'teeny' => true, 'media_buttons' => false, 'textarea_rows' => 4)); ?></td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row">URL Imagen de Fondo</th>
+                    <th scope="row">Imagen de Fondo</th>
                     <td>
-                        <input type="text" name="hero_image" id="hero_image" value="<?php echo esc_attr(get_option('hero_image', get_template_directory_uri() . '/assets/images/hero-construction.jpg')); ?>" class="regular-text" />
-                        <button type="button" class="button" id="hero_image_button">Seleccionar Imagen</button>
+                        <?php $hero_image_url = get_option('hero_image', get_template_directory_uri() . '/assets/images/hero-construction.jpg'); ?>
+                        <div style="margin-bottom: 15px;">
+                            <img id="hero_image_preview" src="<?php echo esc_url($hero_image_url); ?>" style="max-width: 400px; height: auto; border: 1px solid #ddd; padding: 4px; border-radius: 4px; background: #fff; <?php echo empty($hero_image_url) ? 'display: none;' : ''; ?>" />
+                        </div>
+                        <input type="hidden" name="hero_image" id="hero_image" value="<?php echo esc_attr($hero_image_url); ?>" />
+                        <button type="button" class="button button-secondary" id="hero_image_button">Seleccionar Imagen</button>
+                        <button type="button" class="button button-link-delete" id="hero_image_remove" style="<?php echo empty($hero_image_url) ? 'display: none;' : ''; ?> color: #b32d2e; text-decoration: none;">Eliminar</button>
                     </td>
                 </tr>
                  <tr valign="top">
@@ -139,8 +144,20 @@ function agrovial2_options_hero_page() {
             e.preventDefault();
             if (mediaUploader) { mediaUploader.open(); return; }
             mediaUploader = wp.media.frames.file_frame = wp.media({ title: 'Seleccionar Imagen de Fondo', button: { text: 'Usar esta imagen' }, multiple: false });
-            mediaUploader.on('select', function() { var attachment = mediaUploader.state().get('selection').first().toJSON(); $('#hero_image').val(attachment.url); });
+            mediaUploader.on('select', function() { 
+                var attachment = mediaUploader.state().get('selection').first().toJSON(); 
+                $('#hero_image').val(attachment.url); 
+                $('#hero_image_preview').attr('src', attachment.url).show();
+                $('#hero_image_remove').show();
+            });
             mediaUploader.open();
+        });
+        
+        $('#hero_image_remove').click(function(e) {
+            e.preventDefault();
+            $('#hero_image').val('');
+            $('#hero_image_preview').attr('src', '').hide();
+            $(this).hide();
         });
     });
     </script>
