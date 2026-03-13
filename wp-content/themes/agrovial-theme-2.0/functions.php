@@ -1,7 +1,7 @@
 <?php
 function agrovial2_scripts() {
     // Enqueue Google Fonts
-    wp_enqueue_style( 'agrovial2-fonts', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap', array(), null );
+    wp_enqueue_style( 'agrovial2-fonts', 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap', array(), null );
 
     // Enqueue Main Styles
     wp_enqueue_style( 'agrovial2-style', get_template_directory_uri() . '/assets/css/main.css', array(), '2.0.0' );

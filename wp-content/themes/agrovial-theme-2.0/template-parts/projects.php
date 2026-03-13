@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         marker.addListener("gmp-click", () => {
                             infoWindow.close();
                             infoWindow.setContent(`
-                                <div style="font-family: 'Inter', sans-serif; padding: 12px 14px; min-width: 220px; max-width: 280px;">
+                                <div style="font-family: 'Manrope', sans-serif; padding: 12px 14px; min-width: 220px; max-width: 280px;">
                                     <h3 style="margin: 0 0 6px 0; font-weight: 700; font-size: 15px; color: #1C2E3A; line-height: 1.3;">${loc.title}</h3>
                                     ${loc.address ? `<p style="margin: 0 0 10px 0; font-size: 12px; color: #4A4A4A; display: flex; align-items: center; gap: 4px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0F5C3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>

@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const clickHandler = () => {
                 infoWindow.setContent(`
-                    <div style="font-family: 'Inter', sans-serif; padding: 10px 12px; min-width: 200px;">
+                    <div style="font-family: 'Manrope', sans-serif; padding: 10px 12px; min-width: 200px;">
                         <h3 style="margin: 0 0 4px 0; font-weight: 700; font-size: 14px; color: #1C2E3A;">${loc.title}</h3>
                         <p style="margin: 0; font-size: 12px; color: #4A4A4A;">${loc.address}</p>
                     </div>

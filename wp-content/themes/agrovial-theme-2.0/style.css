@@ -44,4 +44,101 @@ Version: 2.0
     --gradient-primary: linear-gradient(135deg, hsl(154 72% 21%) 0%, hsl(146 50% 36%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(64 75% 60%) 0%, hsl(64 70% 50%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(66 33% 95%) 100%);
+
+    /* Tipografía Institucional - Manrope */
+    --font-display: 'Manrope', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+}
+
+/* ============================================
+   JERARQUÍA TIPOGRÁFICA INSTITUCIONAL
+   Fuente: Manrope (Google Fonts)
+   ============================================ */
+
+/* Base: Todo el sitio usa Manrope */
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    /* 140% - Texto corrido */
+}
+
+/* H1 – Título Principal
+   Manrope 700 | Tracking: +1% | Interlineado: 110%
+   Uso: Portadas, secciones principales */
+h1,
+.font-display.text-4xl,
+.font-display.text-5xl,
+.font-display.text-6xl {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+    /* 110% */
+}
+
+/* H2 – Subtítulo
+   Manrope 600 | Interlineado: 120% */
+h2 {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 600 !important;
+    line-height: 1.2;
+    /* 120% */
+}
+
+/* H3 – Subcategorías
+   Manrope 600 | Tamaño menor que H2 */
+h3 {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 600 !important;
+    line-height: 1.25;
+}
+
+/* H4, H5, H6 */
+h4,
+h5,
+h6 {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 600 !important;
+    line-height: 1.3;
+}
+
+/* Texto Corrido
+   Manrope 400 | Interlineado: 140%
+   Uso: Manual, documentos, web */
+p,
+li,
+td,
+th,
+blockquote,
+figcaption,
+.text-muted-foreground,
+.leading-relaxed {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    /* 140% */
+}
+
+/* Botones / Llamados a Acción
+   Manrope 600 | Tracking +2% | Mayúsculas opcional */
+a[class*="gradient-primary"],
+button,
+.filter-btn,
+[role="button"],
+input[type="submit"],
+a[class*="shadow-button"] {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+    /* +2% */
+}
+
+/* Override Tailwind compiled font-display and font-body */
+.font-display {
+    font-family: 'Manrope', sans-serif !important;
+}
+
+.font-body {
+    font-family: 'Manrope', sans-serif !important;
 }

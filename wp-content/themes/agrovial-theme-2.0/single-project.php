@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="pt-24 md:pt-32 pb-16 md:pb-24 bg-background">
+<main class="bg-background" style="padding-top: 9rem; padding-bottom: 5rem;">
     <?php while (have_posts()) : the_post(); 
         $terms = get_the_terms(get_the_ID(), 'project_category');
         $cat_name = !empty($terms) ? $terms[0]->name : '';
@@ -17,20 +17,20 @@
         $stat2_label = get_post_meta(get_the_ID(), '_project_stat2_label', true);
         $stat2_value = get_post_meta(get_the_ID(), '_project_stat2_value', true);
     ?>
-    <article class="container mx-auto px-4">
+    <article class="container mx-auto" style="padding-left: 2rem; padding-right: 2rem;">
         <!-- Header Section -->
-        <header class="mb-12">
+        <header style="margin-bottom: 4rem;">
             <?php if ($cat_name) : ?>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium mb-4 <?php echo $cat_slug === 'publico' ? 'bg-primary/10 text-primary' : 'bg-secondary/10 text-secondary'; ?>">
+                <span class="inline-flex items-center gap-1.5 rounded-full text-sm font-medium <?php echo $cat_slug === 'publico' ? 'bg-primary/10 text-primary' : 'bg-secondary/10 text-secondary'; ?>" style="padding: 8px 18px; margin-bottom: 1.25rem; display: inline-flex;">
                     <?php echo esc_html($cat_name); ?>
                 </span>
             <?php endif; ?>
-            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl mb-6 text-foreground">
+            <h1 class="font-display text-foreground" style="font-size: clamp(2rem, 5vw, 3.75rem); margin-bottom: 2rem; line-height: 1.1;">
                 <?php the_title(); ?>
             </h1>
             
             <!-- Quick Meta -->
-            <div class="flex flex-wrap items-center gap-6 text-muted-foreground text-sm">
+            <div class="flex flex-wrap items-center text-muted-foreground" style="gap: 2rem; font-size: 0.925rem;">
                 <?php if ($location) : ?>
                 <div class="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -55,9 +55,9 @@
         </header>
 
         <!-- Main Layout -->
-        <div class="grid lg:grid-cols-3 gap-10">
+        <div class="grid lg:grid-cols-3" style="gap: 3.5rem;">
             <!-- Left Column: Content & Image -->
-            <div class="lg:col-span-2 space-y-10">
+            <div class="lg:col-span-2" style="display: flex; flex-direction: column; gap: 3rem;">
                 <?php if (has_post_thumbnail()) : ?>
                     <div class="rounded-2xl overflow-hidden shadow-lg border border-border aspect-video">
                         <?php the_post_thumbnail('full', array('class' => 'w-full h-full object-cover')); ?>
@@ -66,29 +66,29 @@
                 
                 <!-- Technical Description -->
                 <div class="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
-                    <h2 class="text-2xl font-display text-foreground mb-4">Descripción Técnica</h2>
+                    <h2 class="font-display text-foreground" style="font-size: 1.75rem; margin-bottom: 1.5rem;">Descripción Técnica</h2>
                     <?php the_content(); ?>
                 </div>
             </div>
 
             <!-- Right Column: Stats & Map -->
-            <div class="space-y-8">
+            <div style="display: flex; flex-direction: column; gap: 2.5rem;">
                 <!-- Quantitative Data -->
                 <?php if (($stat1_label && $stat1_value) || ($stat2_label && $stat2_value)) : ?>
-                    <div class="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border">
-                        <h3 class="font-display text-xl mb-6 text-foreground">Datos Relevantes</h3>
-                        <div class="grid gap-6">
+                    <div class="bg-card rounded-2xl shadow-card border border-border" style="padding: 2rem 2.5rem;">
+                        <h3 class="font-display text-foreground" style="font-size: 1.375rem; margin-bottom: 2rem;">Datos Relevantes</h3>
+                        <div class="grid" style="gap: 1.5rem;">
                             <?php if ($stat1_label && $stat1_value) : ?>
-                                <div class="bg-muted rounded-xl p-4 border border-border/50">
-                                    <div class="text-sm text-muted-foreground mb-1"><?php echo esc_html($stat1_label); ?></div>
-                                    <div class="font-display text-2xl text-primary"><?php echo esc_html($stat1_value); ?></div>
+                                <div class="bg-muted rounded-xl border border-border/50" style="padding: 1.25rem 1.5rem;">
+                                    <div class="text-sm text-muted-foreground" style="margin-bottom: 0.5rem;"><?php echo esc_html($stat1_label); ?></div>
+                                    <div class="font-display text-primary" style="font-size: 1.75rem;"><?php echo esc_html($stat1_value); ?></div>
                                 </div>
                             <?php endif; ?>
                             
                             <?php if ($stat2_label && $stat2_value) : ?>
-                                <div class="bg-muted rounded-xl p-4 border border-border/50">
-                                    <div class="text-sm text-muted-foreground mb-1"><?php echo esc_html($stat2_label); ?></div>
-                                    <div class="font-display text-2xl text-secondary"><?php echo esc_html($stat2_value); ?></div>
+                                <div class="bg-muted rounded-xl border border-border/50" style="padding: 1.25rem 1.5rem;">
+                                    <div class="text-sm text-muted-foreground" style="margin-bottom: 0.5rem;"><?php echo esc_html($stat2_label); ?></div>
+                                    <div class="font-display text-secondary" style="font-size: 1.75rem;"><?php echo esc_html($stat2_value); ?></div>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -97,8 +97,8 @@
 
                 <!-- Map -->
                 <?php if ($lat && $lng) : ?>
-                    <div class="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border">
-                        <h3 class="font-display text-xl mb-6 text-foreground">Geolocalización</h3>
+                    <div class="bg-card rounded-2xl shadow-card border border-border" style="padding: 2rem 2.5rem;">
+                        <h3 class="font-display text-foreground" style="font-size: 1.375rem; margin-bottom: 2rem;">Geolocalización</h3>
                         <div class="rounded-xl overflow-hidden shadow-inner border border-border" style="min-height: 300px; height: 300px; width: 100%;">
                             <div id="project-map" style="width: 100%; height: 100%; min-height: 300px;"></div>
                         </div>
