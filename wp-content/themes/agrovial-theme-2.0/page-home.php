@@ -1,7 +1,7 @@
 <?php
 /**
- * Front Page Template
- * Falls back to the Home template structure for single-page display.
+ * Template Name: Home
+ * Description: Página principal de Agrovial Sur con todas las secciones del sitio.
  */
 get_header(); ?>
 <main>

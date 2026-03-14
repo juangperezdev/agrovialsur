@@ -113,9 +113,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const position = { lat: parseFloat(loc.lat), lng: parseFloat(loc.lng) };
             
             const pin = new google.maps.marker.PinElement({
-                background: '#0F5C3A',
-                borderColor: '#064226',
-                glyphColor: '#DBE64C',
+                background: '#2E8B57',
+                borderColor: '#0F5C3A',
+                glyphColor: '#F6D000',
             });
 
             const marker = new google.maps.marker.AdvancedMarkerElement({
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const clickHandler = () => {
                 infoWindow.setContent(`
                     <div style="font-family: 'Manrope', sans-serif; padding: 10px 12px; min-width: 200px;">
-                        <h3 style="margin: 0 0 4px 0; font-weight: 700; font-size: 14px; color: #1C2E3A;">${loc.title}</h3>
+                        <h3 style="margin: 0 0 4px 0; font-weight: 700; font-size: 14px; color: #19191B;">${loc.title}</h3>
                         <p style="margin: 0; font-size: 12px; color: #4A4A4A;">${loc.address}</p>
                     </div>
                 `);

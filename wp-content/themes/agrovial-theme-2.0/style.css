@@ -7,19 +7,23 @@ Version: 2.0
 */
 
 :root {
-    /* Paleta Primaria - Base */
-    --primary: 154 72% 21%;
-    /* Verde Institucional #0F5C3A */
+    /* ═══════════════════════════════════════════
+       PALETA PRIMARIA
+       ═══════════════════════════════════════════ */
+    --primary: 146 50% 36%;
+    /* Verde Institucional #2E8B57 */
     --primary-alt: 204 35% 17%;
     /* Azul Institucional #1C2E3A */
     --muted-foreground: 0 0% 29%;
     /* Gris Descriptor #4A4A4A */
+    --secondary: 51 100% 48%;
+    /* Amarillo Institucional #F6D000 */
 
-    /* Paleta Secundaria - Soporte */
-    --secondary: 64 75% 60%;
-    /* Amarillo Infraestructura #DBE64C */
-    --primary-medium: 146 50% 36%;
-    /* Verde Medio #2E8B57 */
+    /* ═══════════════════════════════════════════
+       PALETA SECUNDARIA
+       ═══════════════════════════════════════════ */
+    --primary-dark: 154 72% 21%;
+    /* Verde Oscuro #0F5C3A */
     --primary-technical: 218 65% 34%;
     /* Azul Técnico #1E488F */
     --background: 66 33% 95%;
@@ -27,25 +31,31 @@ Version: 2.0
     --foreground: 240 4% 10%;
     /* Negro Texto #19191B */
 
-    /* Component Colors - Semantics */
+    /* ═══════════════════════════════════════════
+       COMPONENT COLORS — SEMÁNTICA
+       ═══════════════════════════════════════════ */
     --card-foreground: var(--foreground);
     --popover-foreground: var(--foreground);
     --secondary-foreground: var(--foreground);
     --accent: 218 65% 34%;
-    /* Azul Técnico para acentos secundarios */
+    /* Azul Técnico para acentos */
     --accent-foreground: 0 0% 100%;
     --muted: 66 33% 92%;
-    /* Blanco Técnico un poco más saturado para fondos muted */
-    --border: 154 30% 85%;
-    /* Borde sutil basado en verde primario */
+    /* Blanco Técnico más saturado para fondos muted */
+    --border: 146 30% 85%;
+    /* Borde sutil basado en verde institucional */
 
-    /* Gradients Refined */
-    --gradient-hero: linear-gradient(135deg, hsl(204 35% 17% / 0.95) 0%, hsl(154 72% 21% / 0.85) 100%);
+    /* ═══════════════════════════════════════════
+       GRADIENTS
+       ═══════════════════════════════════════════ */
+    --gradient-hero: linear-gradient(135deg, hsl(204 35% 17% / 0.95) 0%, hsl(146 50% 36% / 0.85) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(154 72% 21%) 0%, hsl(146 50% 36%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(64 75% 60%) 0%, hsl(64 70% 50%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(51 100% 48%) 0%, hsl(46 100% 42%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(66 33% 95%) 100%);
 
-    /* Tipografía Institucional - Manrope */
+    /* ═══════════════════════════════════════════
+       TIPOGRAFÍA INSTITUCIONAL
+       ═══════════════════════════════════════════ */
     --font-display: 'Manrope', sans-serif;
     --font-body: 'Manrope', sans-serif;
 }

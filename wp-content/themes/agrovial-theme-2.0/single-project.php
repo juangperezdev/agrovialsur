@@ -125,9 +125,9 @@
                                 });
 
                                 const pin = new google.maps.marker.PinElement({
-                                    background: '#0F5C3A',
-                                    borderColor: '#064226',
-                                    glyphColor: '#DBE64C',
+                                    background: '#2E8B57',
+                                    borderColor: '#0F5C3A',
+                                    glyphColor: '#F6D000',
                                 });
 
                                 new google.maps.marker.AdvancedMarkerElement({
